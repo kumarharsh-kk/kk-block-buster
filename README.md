@@ -1,4 +1,4 @@
-https://codespaces.new/kumarharsh-kk/kk-block-buster
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/kumarharsh-kk/kk-block-buster)
 
 # 🎮 Block Buster - Game
 
