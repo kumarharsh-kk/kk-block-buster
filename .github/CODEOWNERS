@@ -1,0 +1,30 @@
+# ============================================
+# CODEOWNERS - Code Ownership Rules
+# ============================================
+
+# Default owners for everything in the repo (unless overridden)
+* @kumarharsh-kk
+
+# Specific file/directory ownership
+# Format: path @username-or-team
+
+# Terraform files
+*.tf @kumarharsh-kk
+
+# Kubernetes manifests
+*.yaml @kubernetes-team
+manifests/ @kumarharsh-kk
+
+# Azure configuration
+azure/ @kumarharsh-kk
+
+# Scripts
+*.bash @devops-team
+*.php @kumarharsh-kk
+
+# Documentation
+docs/ @kumarharsh-kk
+README.md @kumarharsh-kk
+
+# CI/CD configurations
+.github/workflows/ @kumarharsh-kk
