@@ -370,17 +370,9 @@ function activatePowerUp(type) {
     
     switch(type) {
         case 'multiBall':
-            const maxBalls = 5;
-            const ballsToAdd = maxBalls - gameState.balls.length;
-            
-            if (ballsToAdd > 0 && gameState.balls.length > 0) {
-                for (let i = 0; i < ballsToAdd; i++) {
-                    const newBall = { ...gameState.balls[0] };
-                    // Alternate directions for variety
-                    newBall.dx = (i % 2 === 0) ? -gameState.balls[0].dx : gameState.balls[0].dx;
-                    newBall.dy = gameState.balls[0].dy;
-                    gameState.balls.push(newBall);
-                }
+            if (gameState.balls.length < 5) {
+                gameState.balls.push({ ...gameState.balls[0], dx: -gameState.balls[0].dx });
+                gameState.balls.push({ ...gameState.balls[0], dy: Math.abs(gameState.balls[0].dy) });
             }
             gameState.powerups.multiBall.active = true;
             gameState.powerups.multiBall.activationTime = currentTime;
